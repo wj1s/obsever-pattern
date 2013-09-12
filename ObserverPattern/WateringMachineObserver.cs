@@ -1,8 +1,8 @@
 ﻿namespace ObserverPattern
 {
-    public class WateringMachineObserver:IObsever
+    public class WateringMachineObserver : IObsever
     {
-        private WateringMachine wateringMachine;
+        private readonly WateringMachine wateringMachine;
 
         public WateringMachineObserver(WateringMachine wateringMachine)
         {

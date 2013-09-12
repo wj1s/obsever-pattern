@@ -1,4 +1,6 @@
-﻿namespace ObserverPattern
+﻿using System.Collections.Generic;
+
+namespace ObserverPattern
 {
     public class WeatherData
     {
@@ -15,9 +17,13 @@
 
         public void MeasurementsChanged(int temp, int humidity, int windPower)
         {
-            new SeedingMachineObsever(seedingMachine).Update(temp, temp, humidity);
-            new ReapingMachineObserver(reapingMachine).Update(temp, humidity, humidity);
-            new WateringMachineObserver(wateringMachine).Update(temp, humidity, windPower);
+            var obsevers = new List<IObsever>();
+
+            obsevers.Add(new SeedingMachineObsever(seedingMachine));
+            obsevers.Add(new ReapingMachineObserver(reapingMachine));
+            obsevers.Add(new WateringMachineObserver(wateringMachine));
+
+            obsevers.ForEach(o=>o.Update(temp,humidity,windPower));
         }
     }
 }

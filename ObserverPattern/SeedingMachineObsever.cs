@@ -2,7 +2,7 @@
 {
     public class SeedingMachineObsever : IObsever
     {
-        private SeedingMachine seedingMachine;
+        private readonly SeedingMachine seedingMachine;
 
         public SeedingMachineObsever(SeedingMachine seedingMachine)
         {

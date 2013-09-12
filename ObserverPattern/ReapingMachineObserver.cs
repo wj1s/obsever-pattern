@@ -1,8 +1,8 @@
 ﻿namespace ObserverPattern
 {
-    public class ReapingMachineObserver:IObsever
+    public class ReapingMachineObserver : IObsever
     {
-        private ReapingMachine reapingMachine;
+        private readonly ReapingMachine reapingMachine;
 
         public ReapingMachineObserver(ReapingMachine reapingMachine)
         {
