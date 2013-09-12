@@ -1,6 +1,6 @@
 ﻿namespace ObserverPattern
 {
-    public class SeedingMachineObsever
+    public class SeedingMachineObsever : IObsever
     {
         private SeedingMachine seedingMachine;
 
@@ -9,7 +9,7 @@
             this.seedingMachine = seedingMachine;
         }
 
-        public void Update(int temp)
+        public void Update(int temp, int humidity, int windPower)
         {
             if (temp > 5)
                 seedingMachine.Start();

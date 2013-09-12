@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IObsever.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReapingMachine.cs" />
     <Compile Include="ReapingMachineObserver.cs" />

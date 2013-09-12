@@ -1,6 +1,6 @@
 ﻿namespace ObserverPattern
 {
-    public class ReapingMachineObserver
+    public class ReapingMachineObserver:IObsever
     {
         private ReapingMachine reapingMachine;
 
@@ -9,7 +9,7 @@
             this.reapingMachine = reapingMachine;
         }
 
-        public void Update(int temp, int humidity)
+        public void Update(int temp, int humidity, int windPower)
         {
             if (temp > 5 & humidity > 65)
                 reapingMachine.Start();
