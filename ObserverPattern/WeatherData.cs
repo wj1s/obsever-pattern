@@ -14,7 +14,7 @@ namespace ObserverPattern
             this.seedingMachine = seedingMachine;
             this.reapingMachine = reapingMachine;
             this.wateringMachine = wateringMachine;
-            GetObservers();
+            SetObservers();
 
         }
 
@@ -23,7 +23,7 @@ namespace ObserverPattern
             obsevers.ForEach(o=>o.Update(temp,humidity,windPower));
         }
 
-        private void GetObservers()
+        private void SetObservers()
         {
             obsevers.Add(new SeedingMachineObsever(seedingMachine));
             obsevers.Add(new ReapingMachineObserver(reapingMachine));
