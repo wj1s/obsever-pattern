@@ -8,9 +8,14 @@ namespace ObserverPattern
 
         public WeatherData(SeedingMachine seedingMachine, ReapingMachine reapingMachine, WateringMachine wateringMachine)
         {
-            obsevers.Add(new SeedingMachineObsever(seedingMachine));
-            obsevers.Add(new ReapingMachineObserver(reapingMachine));
-            obsevers.Add(new WateringMachineObserver(wateringMachine));
+            Subscribe(new SeedingMachineObsever(seedingMachine));
+            Subscribe(new ReapingMachineObserver(reapingMachine));
+            Subscribe(new WateringMachineObserver(wateringMachine));
+        }
+
+        private void Subscribe(IObsever obsever)
+        {
+            obsevers.Add(obsever);
         }
 
         public void MeasurementsChanged(int temp, int humidity, int windPower)
