@@ -12,7 +12,11 @@ namespace ObserverPatternTest
 
         public WeatherDataFact()
         {
-            weatherData = new WeatherData(seedingMachine, reapingMachine, wateringMachine);
+            var weatherData1 = new WeatherData();
+            weatherData1.Subscribe(new SeedingMachineObsever(seedingMachine));
+            weatherData1.Subscribe(new ReapingMachineObserver(reapingMachine));
+            weatherData1.Subscribe(new WateringMachineObserver(wateringMachine));
+            weatherData = weatherData1;
         }
 
         [Fact]
