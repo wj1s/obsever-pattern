@@ -9,7 +9,7 @@
             this.seedingMachine = seedingMachine;
         }
 
-        public void Update(int temp)
+        public void SeedingMachineUpdate(int temp)
         {
             if (temp > 5)
                 seedingMachine.Start();

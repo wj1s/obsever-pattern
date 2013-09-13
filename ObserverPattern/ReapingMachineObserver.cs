@@ -9,7 +9,7 @@
             this.reapingMachine = reapingMachine;
         }
 
-        public void Update(int temp, int humidity)
+        public void ReapingMachineUpdate(int temp, int humidity)
         {
             if (temp > 5 & humidity > 65)
                 reapingMachine.Start();

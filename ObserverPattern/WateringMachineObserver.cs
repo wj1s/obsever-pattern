@@ -9,7 +9,7 @@
             this.wateringMachine = wateringMachine;
         }
 
-        public void Update(int temp, int humidity, int windPower)
+        public void WateringMachineUpdate(int temp, int humidity, int windPower)
         {
             if (temp > 10 && humidity < 55 && windPower < 4)
                 wateringMachine.Start();

@@ -15,9 +15,9 @@
 
         public void MeasurementsChanged(int temp, int humidity, int windPower)
         {
-            new SeedingMachineObsever(seedingMachine).Update(temp);
-            new ReapingMachineObserver(reapingMachine).Update(temp, humidity);
-            new WateringMachineObserver(wateringMachine).Update(temp, humidity, windPower);
+            new SeedingMachineObsever(seedingMachine).SeedingMachineUpdate(temp);
+            new ReapingMachineObserver(reapingMachine).ReapingMachineUpdate(temp, humidity);
+            new WateringMachineObserver(wateringMachine).WateringMachineUpdate(temp, humidity, windPower);
         }
     }
 }
