@@ -1,6 +1,6 @@
 ﻿namespace ObserverPattern
 {
-    public interface IObsever
+    public interface IObserver
     {
         void Update(int temp, int humidity, int windPower);
     }
