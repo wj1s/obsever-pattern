@@ -4,16 +4,16 @@ namespace ObserverPattern
 {
     public class WeatherData
     {
-        private List<IObsever> obsevers = new List<IObsever>();
+        private List<IObserver> observers = new List<IObserver>();
 
-        public void Subscribe(IObsever obsever)
+        public void Subscribe(IObserver observer)
         {
-            obsevers.Add(obsever);
+            observers.Add(observer);
         }
 
         public void MeasurementsChanged(int temp, int humidity, int windPower)
         {
-            obsevers.ForEach(o=>o.Update(temp,humidity,windPower));
+            observers.ForEach(o=>o.Update(temp,humidity,windPower));
         }
     }
 }
