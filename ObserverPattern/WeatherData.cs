@@ -7,7 +7,7 @@ namespace ObserverPattern
         private readonly ReapingMachine reapingMachine;
         private readonly SeedingMachine seedingMachine;
         private readonly WateringMachine wateringMachine;
-        private List<IObsever> obsevers = new List<IObsever>();
+        private List<IObserver> obsevers = new List<IObserver>();
 
         public WeatherData(SeedingMachine seedingMachine, ReapingMachine reapingMachine, WateringMachine wateringMachine)
         {
@@ -25,7 +25,7 @@ namespace ObserverPattern
 
         private void SetObservers()
         {
-            obsevers.Add(new SeedingMachineObsever(seedingMachine));
+            obsevers.Add(new SeedingMachineObserver(seedingMachine));
             obsevers.Add(new ReapingMachineObserver(reapingMachine));
             obsevers.Add(new WateringMachineObserver(wateringMachine));
         }
