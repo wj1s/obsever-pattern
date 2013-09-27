@@ -1,10 +1,10 @@
 ﻿namespace ObserverPattern
 {
-    public class SeedingMachineObsever : IObsever
+    public class SeedingMachineObserver : IObserver
     {
         private readonly SeedingMachine seedingMachine;
 
-        public SeedingMachineObsever(SeedingMachine seedingMachine)
+        public SeedingMachineObserver(SeedingMachine seedingMachine)
         {
             this.seedingMachine = seedingMachine;
         }
