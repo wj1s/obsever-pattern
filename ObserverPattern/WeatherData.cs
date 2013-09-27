@@ -17,9 +17,9 @@ namespace ObserverPattern
 
         public void MeasurementsChanged(int temp, int humidity, int windPower)
         {
-            var obsevers = new List<IObsever>();
+            var obsevers = new List<IObserver>();
 
-            obsevers.Add(new SeedingMachineObsever(seedingMachine));
+            obsevers.Add(new SeedingMachineObserver(seedingMachine));
             obsevers.Add(new ReapingMachineObserver(reapingMachine));
             obsevers.Add(new WateringMachineObserver(wateringMachine));
 
